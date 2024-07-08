@@ -5,6 +5,11 @@ import java.util.Objects;
 
 public class Department implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private Integer id;
 	private String name;
 	
@@ -31,7 +36,7 @@ public class Department implements Serializable{
 	}
 
 	@Override
-	public int hashCode() {
+	public int hashCode() { //Lembrar é utilizado para comparação de conteúdo, e não referência de Ponteiro. 
 		return Objects.hash(id);
 	}
 
