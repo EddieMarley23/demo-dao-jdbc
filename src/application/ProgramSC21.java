@@ -24,7 +24,7 @@ public class ProgramSC21 {
 		
 		System.out.println(seller);
 		
-		System.out.println("\n==== TEST 2: Seller findById");
+		System.out.println("\n==== TEST 2: Seller findByDepartment");
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
 		for(Seller obj: list) {
@@ -32,7 +32,7 @@ public class ProgramSC21 {
 			
 		}
 		
-		System.out.println("\n==== TEST 3: Seller findByDepartment");
+		System.out.println("\n==== TEST 3: Seller findAll");
 		
 		 list = sellerDao.findAll();
 		for(Seller obj: list) {

@@ -1,17 +1,17 @@
 package application;
 
-import java.util.Date;
-import java.util.Scanner;
+import java.util.List;
+
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entites.Department;
-import model.entites.Seller;
+
 
 public class ProgramSC21_2 {
 
 	public static void main(String[] args) {
-		Scanner sc  = new Scanner(System.in);
+		
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
@@ -33,6 +33,19 @@ public class ProgramSC21_2 {
 		departmentDao.update(department);
 		
 		
+		
+		System.out.println("\n==== TEST 4: department delete");
+		int id = 21;
+		department.setId(id);
+		departmentDao.deleteById(id);
+		
+		System.out.println("\n==== TEST 5: department findAll");
+		List<Department> list = departmentDao.findAll();
+		
+		for(Department obj: list) {
+			System.out.println(obj);
+			
+		}
 
 	}
 
