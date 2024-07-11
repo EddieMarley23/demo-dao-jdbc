@@ -19,6 +19,20 @@ public class ProgramSC21_2 {
 		Department newDepartment = new Department(null, "Accounting");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New id = "+ newDepartment.getId());
+		
+		
+		System.out.println("\n==== TEST 2: department findById");
+		Department department = departmentDao.findById(2);
+		System.out.println(department);
+		
+		
+		
+		System.out.println("\n==== TEST 3: department update");
+		department = departmentDao.findById(1);
+		department.setName("TestChange");
+		departmentDao.update(department);
+		
+		
 
 	}
 
